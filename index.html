@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<center>
+<style>
+table, th, td {
+  border-collapse:collapse;
+  font-family:Helvetica;
+}
+td,th{width:50%;} //tamañodearea
+input:focus,select:focus,
+textarea:focus {
+  outline: 1px dashed green;
+}
+textarea{
+width:100%;
+height:100px;
+font-family:Helvetica;
+border:1px solid black;}
+select,input{
+width:100%;
+font-family:Helvetica;
+padding:5px;
+border:2px solid gray; //cuadros
+}
+input:hover{
+background:White;}
+button{width:20%; //botones
+font-family:Helvetica;}
+button:focus {
+  outline: 2px dashed green;}
+  button:hover{
+background:green;color:white;}
+</style>
+<body>
+<?!= include('entry.js') ?>
+<?!= include('read.js') ?>
+<?!= include('update.js') ?>
+<?!= include('delete.js') ?>
+<table border=0 width=700px>
+<tr>
+<th>DATA JADCOCLE <hr></th>
+<th><input id="id" placeholder="Ingrese el ID para Buscarlo Para Ver , Actualizar o Borrar"><hr></th>
+</tr>
+<tr>
+<td>NOMBRE COMPLETO:<input id="name"></td>
+<td>CORREO:<input id="eid"></td>       
+</tr>
+<tr>
+<td>ELEGIR CIRCUITO:
+
+<select id="selected">
+<option>ELEGIR CIRCUITO </option>
+<option value="CIRCUITO A-PENONOME">CIRCUITO A-PENONOME </option>
+<option value="CIRCUITO B-AGUADULCE">CIRCUITO B-AGUADULCE </option>
+<option value="CIRCUITO C-NATA&OLA">CIRCUITO C-NATA&OLA </option>
+<option value="CIRCUITO D-ANTON">CIRCUITO D-ANTON </option>
+<option value="CIRCUITO E-LA PINTADA">CIRCUITO E-LA PINTADA </option>
+<option value="CIRCUITO F-AREA NORTE">CIRCUITO F-AREA NORTE </option>
+</select>
+
+</td>
+<td>FECHA DE : NACIMIENTO: <input type="date" id="date"></td>       
+</tr>
+<tr>
+<td>INGRESAR No.CELULAR <input type = "number" id="number"></td>    
+<tr>
+<td>CORREGIMIENTOS:
+
+<select id="texto1">
+<option> ELEGIR CORREGIMIENTOS</option>
+<option value="CORREGIMIENTO DE CAÑAVERAL">CORREGIMIENTO DE CAÑAVERAL </option>
+<option value="CORREGIMIENTO DE COCLE">CORREGIMIENTO DE COCLE </option>
+<option value="CORREGIMIENTO DE CHIGUIRI ARRIBA">CORREGIMIENTO DE CHIGUIRI ARRIBA </option>
+<option value="CORREGIMIENTO DE EL COCO">CORREGIMIENTO DE EL COCO </option>
+<option value="CORREGIMIENTO DE PAJONAL">CORREGIMIENTO DE PAJONAL </option>
+<option value="CORREGIMIENTO DE PENONOME CAB">CORREGIMIENTO DE PENONOME CAB </option>
+<option value="CORREGIMIENTO DE RIO GRANDE">CORREGIMIENTO DE RIO GRANDE </option>
+<option value="CORREGIMIENTO DE RIO INDIO">CORREGIMIENTO DE RIO INDIO </option>
+<option value="CORREGIMIENTO DE TOABRE">CORREGIMIENTO DE TOABRE </option>
+<option value="CORREGIMIENTO DE TULU">CORREGIMIENTO DE TULU </option>
+<option value="CORREGIMIENTO DE EL RETIRO">CORREGIMIENTO DE EL RETIRO </option>
+<option value="CORREGIMIENTO DE RIO HATO">CORREGIMIENTO DE RIO HATO </option>
+<option value="CORREGIMIENTO DE AGUADULCE">CORREGIMIENTO DE AGUADULCE </option>
+<option value="CORREGIMIENTO DE LLANO GRANDE">CORREGIMIENTO DE LLANO GRANDE </option>
+<option value="CORREGIMIENTO DE EL CAÑO">CORREGIMIENTO DE EL CAÑO </option>
+<option value="CORREGIMIENTO DE EL COPE">CORREGIMIENTO DE EL COPE </option>
+<option value="NINGUNO">NINGUNO </option>
+<option value="CORREGIMIENTO DE JUAN DIAZ">CORREGIMIENTO DE JUAN DIAZ </option>
+<option value="CORREGIMIENTO DE EL VALLE DE ANTON">CORREGIMIENTO DE EL VALLE DE ANTON </option>
+<option value="CORREGIMIENTO DE ANTON">CORREGIMIENTO DE ANTON </option>
+<option value="CORREGIMIENTO DE POCRI">CORREGIMIENTO DE POCRI </option>
+<option value="CORREGIMIENTO DE SANTA RITA ">CORREGIMIENTO DE SANTA RITA </option>
+<select>
+<td>RESIDENCIA:
+
+<select id="texto2">
+<option> ELEGIR UBICACION </option>
+<OPTION VALUE="COCLE">COCLE </OPTION>
+<OPTION VALUE="DISTRITO DE PENONOMÉ">DISTRITO DE PENONOMÉ </OPTION>
+<OPTION VALUE="DISTRITO DE AGUADULCE">DISTRITO DE AGUADULCE </OPTION>
+<OPTION VALUE="DISTRITO DE ANTÓN">DISTRITO DE ANTÓN </OPTION>
+<OPTION VALUE="CIRUELITO">CIRUELITO </OPTION>
+<OPTION VALUE="EL CHIRÚ">EL CHIRÚ </OPTION>
+<OPTION VALUE="EL VALLE">EL VALLE </OPTION>
+<OPTION VALUE="JUAN DÍAZ">JUAN DÍAZ </OPTION>
+<OPTION VALUE="RÍO HATO">RÍO HATO </OPTION>
+<OPTION VALUE="GUABAS ABAJO">GUABAS ABAJO </OPTION>
+<OPTION VALUE="GUABAS ARRIBA">GUABAS ARRIBA </OPTION>
+<OPTION VALUE="BDA ARCOIRIS">BDA ARCOIRIS </OPTION>
+<OPTION VALUE="BDA EL MIRADOR">BDA EL MIRADOR </OPTION>
+<OPTION VALUE="DISTRITO DE LA PINTADA">DISTRITO DE LA PINTADA </OPTION>
+<OPTION VALUE="DISTRITO DE NATÁ">DISTRITO DE NATÁ </OPTION>
+<OPTION VALUE="POZO RICO ">POZO RICO </OPTION>
+<OPTION VALUE="JAGUITO">JAGUITO </OPTION>
+<OPTION VALUE="CANTA RANA">CANTA RANA </OPTION>
+<OPTION VALUE="DISTRITO DE OLÁ">DISTRITO DE OLÁ </OPTION>
+<OPTION VALUE="POCRI">POCRI </OPTION>
+<OPTION VALUE="EL VALLE DE ANTON">EL VALLE DE ANTON </OPTION>
+<OPTION VALUE="RIO GRANDE">RIO GRANDR </OPTION>
+<select>
+<tr>
+<tr>
+<td>EDAD:<input id="texto3"></td>
+<td> GRUPO DEL MIEMBRO:
+
+<select id="texto4">
+<option> ELEGIR GRUPO</option>
+<option value="DIRECTIVA">DIRECTIVA </option>
+<option value="LIDERES LOCALES POR CIRCUITO">LIDERES LOCALES POR CIRCUITO </option>
+<option value="LIDERES DE CIRCUITALES">LIDERES DE CIRCUITALES</option>
+<option value="NO TIENE GRUPO">NO TIENE GRUPO</option>
+<option value="ES MIEMBRO">ES MIEMBRO</option>
+<select>
+</tr>
+<tr>
+<td>RED SOCIAL:<input id="texto5"></td>
+<td> MINISTERIO A LOS JOVENES: <input id="texto6"></td>
+<tr>
+<td>CANTIDAD DE JOVENES:<input id="texto7"></td>
+<td>IGLESIA: <input id="texto8"></td>
+</tr>
+<td>PASTOR: <input id="texto9"></td>
+<td>CARGO: 
+
+<select id="texto10">
+<option> ELEGIR CARGO</option>
+<option value="LIDER1">LIDER1 </option>
+</tr>
+</tr>
+<td colspan="2"align="center">
+<button onclick="submit()">REGISTRAR</button>
+<button onclick="read()">BUSCAR</button>
+<button onclick="update()">ACTUALIZAR</button>
+<button onclick="delet()">BORRAR DATA</button>
+</td>    
+</tr>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="img"style="text-align: center;right: -50px;">
+  <img src="https://i.ibb.co/x3Swn8b/compressorpng-Logo-Jad-Cocl-PNG-Photo-Room.webp" alt="compressorpng-Logo-Jad-Cocl-PNG-Photo-Room" border="0">
+    </div>
+<tr>
+<td colspan="2">Respuesta:<b  id="result"></b></td>    
+</tr>
+</tr>
+</tr>
+</tr>
+</tr>
+</tr>
+</tr>
+</tr>
+<footer> <small>JADCOCLE 2022</small> </footer> 
+</tr>
+  <small> CREADO CON ❤️ POR @JAIRNAY&copy
+</table>  
+</body>
+</html>
